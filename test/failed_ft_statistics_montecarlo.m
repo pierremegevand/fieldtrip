@@ -2,11 +2,9 @@ function failed_ft_statistics_montecarlo
 
 % MEM 4gb
 % WALLTIME 00:20:00
+% DEPENDENCY ft_statistics_montecarlo ft_timelockstatistics ft_freqstatistics ft_sourcestatistics clusterstat findcluster
 
-% TEST test_ft_statistics_montecarlo
-% TEST ft_statistics_montecarlo ft_timelockstatistics ft_freqstatistics ft_sourcestatistics clusterstat findcluster
-
-% test the functionality of ft_statistics_montecarlo, in particular with respect to the clustering behaviour.
+% test the functionality of ft_statistics_montecarlo, in particular with respect to the clustering behavior.
 
 % start with some data
 filename = dccnpath('/home/common/matlab/fieldtrip/data/test/latest/raw/meg/preproc_ctf275.mat');
