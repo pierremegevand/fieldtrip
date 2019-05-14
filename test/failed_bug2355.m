@@ -11,7 +11,7 @@ vol.o = [0 0 4];
 vol.unit = 'cm';
 
 %% make a set of electrodes, in cm
-[pnt, tri] = sphere_mesh(162);
+[pnt, tri] = mesh_sphere(162);
 pnt = pnt(pnt(:,3)>0,:); % only above z=0
 pnt = pnt*12;
 pnt(:,3) = pnt(:,3) + 4;
@@ -63,7 +63,7 @@ grid5 = ft_prepare_sourcemodel(cfg5);
 assert(sum(grid5.inside)==2469);
 
 %% repeat with cfg.xgrid etc. instead of cfg.resolution
-% cfg.sourceunits was used prior to 31 October 2013, now it is cfg.sourcemodel.unit
+% cfg.sourceunits was used prior to 31 October 2013, now it is cfg.unit
 
 clear cfg* grid*
 
@@ -93,7 +93,7 @@ grid3 = ft_prepare_sourcemodel(cfg3);
 assert(sum(grid3.inside)==2469);
 
 %% repeat with new name of cfg.sourceunits option
-% cfg.sourceunits was used prior to 31 October 2013, now it is cfg.sourcemodel.unit
+% cfg.sourceunits was used prior to 31 October 2013, now it is cfg.unit
 
 clear cfg* grid*
 
